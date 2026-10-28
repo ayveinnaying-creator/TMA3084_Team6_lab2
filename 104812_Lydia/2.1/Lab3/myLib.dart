@@ -6,19 +6,14 @@ class Employee {
   Employee(this.basicSalary, this.overtimeHours);
 
   double calculateOvertime() {
-    double overtimeRate;
-
     if (basicSalary >= 4000) {
-      overtimeRate = 10;
+      return overtimeHours * 10;
     } else {
-      overtimeRate = 0;
+      return 0;
     }
-
-    return overtimeHours * overtimeRate;
   }
 
   double calculateTotalPayment() {
     return basicSalary + calculateOvertime();
   }
 }
-
